@@ -1193,6 +1193,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.addWidget(self.frame_3)
 
         self.stackedWidget.addWidget(self.page_widgets)
+        self.page_movies = QWidget()
+        self.page_movies.setObjectName(u"page_movies")
+        self.verticalLayout_movies = QVBoxLayout(self.page_movies)
+        self.verticalLayout_movies.setObjectName(u"verticalLayout_movies")
+        self.label_movies = QLabel(self.page_movies)
+        self.label_movies.setObjectName(u"label_movies")
+        font_movies = QFont()
+        font_movies.setFamily(u"Segoe UI")
+        font_movies.setPointSize(20)
+        self.label_movies.setFont(font_movies)
+        self.label_movies.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_movies.addWidget(self.label_movies)
+
+        self.stackedWidget.addWidget(self.page_movies)
 
         self.verticalLayout_9.addWidget(self.stackedWidget)
 
@@ -1306,6 +1321,7 @@ class Ui_MainWindow(object):
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"HOME", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Empyt Page - By: Camjayi E. Sebastian", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Page Index 0", None))
+        #self.label_movies.setText(QCoreApplication.translate("MainWindow", u"Movies - Coming Soon", None))
         self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"BLENDER INSTALLATION", None))
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Your Password", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Open Blender", None))
