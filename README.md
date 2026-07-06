@@ -37,4 +37,4 @@ python main.py
 
 
 ## Créditos
-Basado en el template UIXCore (PyQt6) — desk template dark/flat GUI.
+Basado en el template UIXCore (PyQt6) - desk template dark/flat GUI.
