@@ -8,9 +8,12 @@ from PyQt6.QtWidgets import *
 # GUI FILE
 from app_modules import *
 
+<<<<<<< HEAD
 # MOVIES MODULE
 from movies_module import MovieListPage
 
+=======
+>>>>>>> 647f326d7b11bdd5eaa71bf29439380e20e7f5fc
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -30,6 +33,7 @@ class MainWindow(QMainWindow):
         ## ==> END ##
 
         ## SET ==> WINDOW TITLE
+<<<<<<< HEAD
         self.setWindowTitle('NetfloxPyDesk - España')
         UIFunctions.labelTitle(self, 'NetfloxPyDesk - España')
         UIFunctions.labelDescription(self, 'List of Movies - España')
@@ -37,6 +41,15 @@ class MainWindow(QMainWindow):
 
         ## WINDOW SIZE ==> DEFAULT SIZE
         startSize = QSize(1020, 700)
+=======
+        self.setWindowTitle('NetfloxPyDesk')
+        UIFunctions.labelTitle(self, 'NetfloxPyDesk')
+        UIFunctions.labelDescription(self, 'Mi Programa')
+        ## ==> END ##
+
+        ## WINDOW SIZE ==> DEFAULT SIZE
+        startSize = QSize(1024, 720)
+>>>>>>> 647f326d7b11bdd5eaa71bf29439380e20e7f5fc
         self.resize(startSize)
         self.setMinimumSize(startSize)
         # UIFunctions.enableMaximumSize(self, 500, 720)
@@ -59,6 +72,7 @@ class MainWindow(QMainWindow):
         ## ==> END ##
 
         # START MENU => SELECTION
+<<<<<<< HEAD
         UIFunctions.selectStandardMenu(self, "btn_movies")
         ## ==> END ##
 
@@ -69,6 +83,17 @@ class MainWindow(QMainWindow):
 
         ## USER ICON ==> SHOW HIDE
         UIFunctions.userIcon(self, "ES", "", True)
+=======
+        UIFunctions.selectStandardMenu(self, "btn_home")
+        ## ==> END ##
+
+        ## ==> START PAGE
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_home)
+        ## ==> END ##
+
+        ## USER ICON ==> SHOW HIDE
+        UIFunctions.userIcon(self, "SC", "", True)
+>>>>>>> 647f326d7b11bdd5eaa71bf29439380e20e7f5fc
         ## ==> END ##
 
 
@@ -115,6 +140,7 @@ class MainWindow(QMainWindow):
         self.ui.tableWidget.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.ResizeMode.Stretch)
         ## ==> END ##
 
+<<<<<<< HEAD
         ## ==> MOVIES PAGE: reemplazo el label placeholder por la grilla real
         ########################################################################
         self.ui.verticalLayout_movies.removeWidget(self.ui.label_movies)
@@ -124,6 +150,8 @@ class MainWindow(QMainWindow):
         self.ui.verticalLayout_movies.addWidget(self.movie_list_page)
         ## ==> END ##
 
+=======
+>>>>>>> 647f326d7b11bdd5eaa71bf29439380e20e7f5fc
 
 
         ########################################################################
@@ -224,6 +252,11 @@ if __name__ == "__main__":
     QtGui.QFontDatabase.addApplicationFont('fonts/segoeuib.ttf')
 
     # Obtiene la altura de la pantalla y calcula un tamaño de fuente dinámico
+<<<<<<< HEAD
+=======
+    # IMPORTANTE: Se debe tener en cuenta que el tamaño de fuente puede variar
+    # dependiendo de la resolución de la pantalla 0.016 es para resolusion != 4k, para 4k usar 0.008
+>>>>>>> 647f326d7b11bdd5eaa71bf29439380e20e7f5fc
 
     font_size = int(app.primaryScreen().size().height() * 0.015) 
 
